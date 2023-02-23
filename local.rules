@@ -1,0 +1,6 @@
+alert tcp any any -> $HOME_NET 8080 (msg:"Port:8080 --> scan detected"; flags:S; threshold: type both, track by_src, count 5, seconds 30; sid:1000001; rev:1;)
+alert tcp any any -> $HOME_NET 8081 (msg:"Port:8081 --> scan detected"; flags:S; threshold: type both, track by_src, count 5, seconds 30; sid:1000001; rev:1;)
+alert tcp any any -> $HOME_NET 443 (msg:"Web:443 --> scan detected"; flags:S; threshold: type both, track by_src, count 5, seconds 30; sid:1000001; rev:1;)
+alert tcp any any -> $HOME_NET 80 (msg:"Phpsysinfo:80 --> scan detected"; flags:S; threshold: type both, track by_src, count 5, seconds 30; sid:1000001; rev:1;)
+alert tcp any any -> $HOME_NET 22 (msg:"SSH:22 --> scan detected"; flags:S; threshold: type both, track by_src, count 5, seconds 30; sid:1000001; rev:1;)
+alert tcp any any -> $HOME_NET 9000 (msg:"Portaniner:9000 --> scan detected"; flags:S; threshold: type both, track by_src, count 5, seconds 30; sid:1000001; rev:1;)
